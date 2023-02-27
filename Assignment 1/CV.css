@@ -56,6 +56,54 @@ body{
     object-fit: cover;
 }
 
+.profileText h2{
+    color: #fff;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+
+.profileText h2 span{
+    font-size: 0.7em;
+    font-weight: 300;
+}
+
+.Info{
+    padding: 40px;
+}
+
+.Info ul{
+    position: relative;
+}
+
+.Info ul li{
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.Info ul li .icon{
+    display: inline-block;
+    color: #14f7d8;
+    width: 30px;
+    font-size: 20px;
+}
+
+.Info ul li span{
+    color: #fff;
+    font-weight: 200;
+}
+.title{
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    margin-bottom: 20px;
+}
 .container .right{
     position: relative;
     background: #fff;
