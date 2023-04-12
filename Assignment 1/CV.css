@@ -68,7 +68,8 @@
   }
   
   .info .detail {
-    width:50%;
+    /* width:50%; */
+    margin-right: 4rem;
   }
   
   .info .detail p:first-child {

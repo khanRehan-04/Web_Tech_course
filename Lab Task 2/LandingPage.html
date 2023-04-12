@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>  
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>  
     <link rel="stylesheet" href="LandingPage.css">
 </head>
 <body>
@@ -27,10 +29,10 @@
                         <a class="nav-link" href="#">Shop</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="AboutUs.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link"  href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -39,10 +41,10 @@
     <div class="right-nav">
         <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle mt-10" type="button" data-toggle="dropdown">
-              Account
+              Profile
             </button>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Log In</a>
+              <a class="dropdown-item" href="LogIn.html">Log In</a>
               <a class="dropdown-item" href="SignUp.html">Sign Up</a>
             </div>
           </div>
@@ -96,7 +98,7 @@
         </div>
     </section>
     <footer>
-        <div class="container">
+        <div class="container" id ="contact">
             <p>&copy; 2023 Shadow Realm</p>
             <ul class="social-icons">
                 <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
