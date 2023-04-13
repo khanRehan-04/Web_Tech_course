@@ -1,0 +1,131 @@
+/* Navbar style */
+.navbar-default {
+    background-color: black;
+    border-color: transparent;
+  }
+  
+  .navbar-default .navbar-brand {
+    color: white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .navbar-default .navbar-nav>li>a {
+    color: white;
+  }
+  
+  .navbar {
+    background-color: black;
+    color: white;
+  }
+  
+  .navbar-nav {
+    float: left;
+    margin: 0;
+  }
+  
+  .navbar-right {
+    float: right !important;
+    margin-right: 0 !important;
+  }
+  
+  .dropdown-menu {
+    background-color: black;
+  }
+  
+  .dropdown-menu>li>a {
+    color: white;
+  }
+
+  .first-div{
+    background-image: url("1.png");
+    background-size: cover;
+    height: 600px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .second-div{
+    background-image: url("2.png");
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .third-div, .fourth-div {
+    background-color: lightblue;
+    color: white;
+    text-align: center;
+    height: 100px;
+    width: 50%;
+    float: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    padding: 20px;
+  }
+
+  .third-div{
+    background-image: url("3.png");
+    background-size: cover;
+    height: 250px;
+    width: 50%;
+  }
+  .fourth-div{
+    background-image: url("4.png");
+    background-size: cover;
+    height: 250px;
+    width: 50%;
+  }
+  .list-inline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 140px;
+  }
+  .list-inline li {
+    padding: 10px;
+  }
+  .list-inline li:hover a {
+    text-decoration: underline;
+    color: red;
+  }
+
+  .footer {
+    background-color: black;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  .social-icons {
+    text-align: center;
+  }
+  
+  .social-icons li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
+  .social-icons a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    background-color: #eee;
+  }
+  
+  .social-icons a:hover {
+    background-color: #ccc;
+  }
+  
+  .social-icons a i {
+    font-size: 24px;
+    color: #333;
+  }
+  
