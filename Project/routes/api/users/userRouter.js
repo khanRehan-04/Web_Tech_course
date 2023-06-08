@@ -25,39 +25,44 @@ router.get("/login", (req, res) => {
   res.render("auth/login");
 });
 
-router.post("/login", async (req, res) => {
+router.post('/login', async (req, res) => {
   const { email, password, admin } = req.body;
 
   try {
     const user = await User.findOne({ email });
 
     if (!user || user.password !== password) {
-      res.status(404).send("Invalid email or password");
+      res.status(401).send('Invalid email or password');
     } else {
-      if (admin && user.usertype === "admin") {
-        const users = await User.find({ usertype: "user" });
-        res.render("usersList", { users });
+      req.session.user = user;
+      if (admin && user.usertype === 'admin') {
+        const users = await User.find({ usertype: 'user' });
+        res.render('usersList', { users });
       } else {
-        res.render("profile", { user });
+        res.render('profile', { user });
       }
     }
   } catch (error) {
     console.error(error);
-    res.status(500).send("Error logging in");
+    res.status(500).send('Error logging in');
   }
 });
 
 
+
 // Route to render the users list view
-router.get('/usersList', async (req, res) => {
+const { adminOnly } = require('../../../authMiddleware');
+
+router.get('/usersList', adminOnly, async (req, res) => {
   try {
     const users = await User.find({ usertype: 'user' });
     res.render('usersList', { users });
   } catch (error) {
     console.error(error);
-    res.status(500).send('Error fetching user list');
+    res.status(500).send('Error fetching users');
   }
 });
+
 
 module.exports = router;
 
