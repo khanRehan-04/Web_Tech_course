@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JRPG Game Landing Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>  
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>  
+    <link rel="stylesheet" href="/style/LandingPage.css">
+</head>
+<body>
+   <header class="header-main">
+    <div class="left-nav">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Shadow Realm</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">anded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="AboutUs.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"  href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav> 
+    </div>
+    <div class="right-nav">
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle mt-10" type="button" data-toggle="dropdown">
+              Profile
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/api/users/login">Log In</a>
+              <a class="dropdown-item" href="/api/users/register">Sign Up</a>
+            </div>
+          </div>
+          
+    </div>
+   
+   </header>
+
+    <section class="content">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <h1 class="display-4 mb-4">Shadow Realm</h1>
+              <p class="lead mb-5">Embark on a journey through a mystical world of shadows and adventures.</p>
+              <a href="#" class="btn btn-primary btn-lg">Play Now</a>
+            </div>
+          </div>
+        </div>
+    </section>
+      
+    <section class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Explore a vast world</h2>
+                <p>Discover new lands, meet interesting characters, and battle fearsome monsters as you travel through a world full of wonder and adventure.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="/images/1.jpg" alt="Explore a vast world">
+            </div>
+        </div>
+    </section>
+    <section class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="/images/2.jpg" alt="Battle fearsome monsters">
+            </div>
+            <div class="col-md-6">
+                <h2>Battle fearsome monsters</h2>
+                <p>Fight epic battles against giant beasts, use powerful magic spells, and summon legendary creatures to aid you in your quest.</p>
+            </div>
+        </div>
+    </section>
+    <section class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Customize your character</h2>
+                <p>Create your own unique hero, choose your class, and customize your appearance with a variety of armor and weapons.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="/images/3.jpg" alt="Customize your character">
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container" id ="contact">
+            <p>&copy; 2023 Shadow Realm</p>
+            <ul class="social-icons">
+                <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                <li><a href="#"><ion-icon name="logo-youtube"></ion-icon></a></li>
+            </ul>
+    </footer> 
+</body>
+</html>

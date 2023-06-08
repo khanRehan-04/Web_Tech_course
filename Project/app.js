@@ -1,0 +1,36 @@
+const express = require("express");
+const app = express();
+const mongoose = require("mongoose");
+
+
+// Middleware
+app.use(express.json());
+app.set("view engine", "ejs");
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static("public"));
+
+
+// API Rout
+app.use("/api/users", require("./routes/api/users/userRouter"));
+
+
+app.get("/", (req, res) => {
+  res.render("LandingPage");
+});
+
+// Start server
+const port = 4000;
+app.listen(port, () => console.log(`Listening on port ${port}...`));
+
+// Connect to MongoDB
+const connectionString =
+  "mongodb+srv://rehan:rehan@atlascluster.vzthwzw.mongodb.net/User";
+mongoose
+  .connect(connectionString, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    console.log("Connected to MongoDB..." + connectionString);
+  })
+  .catch((err) => console.error("Could not connect to MongoDB..."));

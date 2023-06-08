@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>user List</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="output.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap');
+    body{
+        font-family:Montserrat;
+    }
+</style>
+<body>
+
+<h1 class="">user List</h1>
+<ul id="user-list"></ul>
+
+<script>
+    $(document).ready(function() {
+
+        $.ajax({
+            url: '/api/user',
+            method: 'GET',
+            success: function(response) {
+                var userList = response.map(function(user) {
+                    return `<li>${user.filename} - ${user.filetype} - ${user.size} - ${user.extension}</li>`;
+                });
+
+                $('#user-list').append(userList);
+            },
+
+            error: function(error) {
+                console.log('Error:', error);
+            }
+        });
+    });
+</script>
+</body>
+</html>
