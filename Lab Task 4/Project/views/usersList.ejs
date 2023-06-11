@@ -1,0 +1,48 @@
+<!-- usersList.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Users List</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1 class="mt-4">Users List</h1>
+    <table class="table mt-4">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>User Type</th>
+          <th>Level</th>
+          <th>Power</th>
+          <th>Achievements</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% users.forEach(function(user) { %>
+          <tr>
+            <td><%= user.name %></td>
+            <td><%= user.email %></td>
+            <td><%= user.usertype %></td>
+            <td><%= user.playerProfile.level %></td>
+            <td><%= user.playerProfile.power %></td>
+            <td>
+              <ul>
+                <% user.playerProfile.achievements.forEach(function(achievement) { %>
+                  <li><%= achievement %></li>
+                <% }) %>
+              </ul>
+            </td>
+            <td>
+                <a href="/api/users/edit/<%= user._id %>" class="btn btn-primary">Edit</a>
+                <a href="/api/users/deleteUser/<%= user._id %>" class="btn btn-danger">Delete</a>
+              </td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+    <a href="/api/users/add" class="btn btn-success">Add User</a>
+  </div>
+</body>
+</html>

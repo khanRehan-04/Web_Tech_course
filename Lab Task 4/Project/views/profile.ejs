@@ -1,0 +1,36 @@
+<!-- profile.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Player Profile</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1 class="mt-4">Welcome, <%= user.name %>!</h1>
+    <div class="card mt-4">
+      <div class="card-header">
+        <h2>Player Profile</h2>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-6">
+            <h5>Level:</h5>
+            <p class="lead"><%= user.playerProfile.level %></p>
+          </div>
+          <div class="col-md-6">
+            <h5>Power:</h5>
+            <p class="lead"><%= user.playerProfile.power %></p>
+          </div>
+        </div>
+        <h5 class="mt-4">Achievements:</h5>
+        <ul class="list-group">
+          <% user.playerProfile.achievements.forEach((achievement) => { %>
+            <li class="list-group-item"><%= achievement %></li>
+          <% }); %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
